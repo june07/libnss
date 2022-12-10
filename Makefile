@@ -265,7 +265,7 @@ test_on_docker: docker
 	docker exec -t libnss-stns make integration
 
 github_release: ## Create some distribution packages
-	ghr -u STNS --replace v$(VERSION) builds/
+	ghr -u june07 --replace v$(VERSION) builds/
 
 stnsd:
 	! test -e /etc/lsb-release || (! (dpkg -l |grep stnsd) && \
